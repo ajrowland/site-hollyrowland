@@ -1,8 +1,116 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-GB">
 <head>
-  <title>Joe's github pages site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Joe Rowland</title>
+  <meta name="description" content="Holding page.">
+  <meta name="theme-color" content="#0099ff"/>
+  <meta name="msapplication-TileColor" content="#a73233" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" />
+<style>
+  html, body {
+    height: 100%;
+    min-width: 320px;
+  }
+  body {
+    background: #0e1a25;
+    margin: 0;
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: #fff;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+  }
+  header {
+    background-color: #0099ff;
+    color: #fff;
+    height: 50%;
+  }
+  header .container {
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  .container {
+    margin: auto;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  h1, h2 {
+    font-family: "Open Sans Condensed";
+  }
+  
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-weight: 300;
+    font-size: 21px;
+  }
+  img {
+    max-width: 80px;
+    border-radius: 40px;
+    margin-bottom: 5px;
+    display: none;
+  }
+  .social {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: -2px;
+  }
+  .social li {
+    display: inline-block;
+    width: 30px;
+  }
+  .social a {
+    fill: #0099ff;
+  }
+  @media screen and (min-height: 480px) {
+    img {
+      display: inline-block;
+    }
+  }
+  @media screen and (min-width: 640px) {
+    body {
+      font-size: 18px;
+    }
+    .container {
+      padding: 30px;
+    }
+    h1 {
+      font-size: 45px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    img {
+      max-width: 120px;
+      border-radius: 60px;
+    }
+    .social {
+      width: -10px;
+    }
+    .social li {
+      width: 45px;
+    }
+  }
+</style>
 </head>
 <body>
-  <h1>Joe Rowland</h1>
+<header itemscope itemtype="http://schema.org/LocalBusiness">
+  <div class="container">
+    <h1 itemprop="name">Joe Rowland</h1>
+  </div>
+</header>
+<main>
+  <div class="container"></div>
+</main>
 </body>
 </html>
