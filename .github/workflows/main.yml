@@ -36,8 +36,9 @@ jobs:
         run: |
           files=$(find ./dist -name '*.html')
           filelist=$(printf ",%s" "${files[@]//.\/dist/}")
-          echo "::set-env name=URL_LIST::${filelist:1}"
+          URL_LIST=${filelist:1}
+          echo "::set-env name=URL_LIST::$(URL_LIST)"
           
       - name: Test display of list
-        run: echo $URL_LIST
+        run: echo $(URL_LIST)
  
