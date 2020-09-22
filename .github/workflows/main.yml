@@ -34,11 +34,11 @@ jobs:
           
       - name: Get list of HTML files
         run: |
-          files=$(find ./dist -name '*.html')
+          files=$(find ./dist -name '*.html' | xargs)
           filelist=$(printf ",%s" "${files[@]//.\/dist/}")
           URL_LIST=${filelist:1}
-          echo "::set-env name=URL_LIST::$(URL_LIST)"
+          echo "::set-env name=URL_LIST::$URL_LIST"
           
       - name: Test display of list
-        run: echo $(URL_LIST)
+        run: echo $URL_LIST
  
