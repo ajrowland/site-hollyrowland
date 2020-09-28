@@ -36,7 +36,7 @@ jobs:
         id: geturls
         run: |
           files=$(find ./dist -name '*.html' | xargs)
-          filelist=$(printf ",%s" "${files[@]//.\/dist/}")
+          filelist=$(printf ",\n" "${files[@]//.\/dist/}")
           URL_LIST=${filelist:1}
           echo "::set-output name=URL_LIST::$URL_LIST"
           
