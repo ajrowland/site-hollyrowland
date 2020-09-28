@@ -33,12 +33,13 @@ jobs:
           echo test, and deploy your project.
           
       - name: Get list of HTML files
+        id: geturls
         run: |
           files=$(find ./dist -name '*.html' | xargs)
           filelist=$(printf ",%s" "${files[@]//.\/dist/}")
           URL_LIST=${filelist:1}
-          echo "::set-env name=URL_LIST::$URL_LIST"
+          echo "::set-output name=URL_LIST::$URL_LIST"
           
       - name: Test display of list
-        run: echo $URL_LIST
+        run: echo "${{ steps.geturls.outputs.URL_LIST }}"
  
